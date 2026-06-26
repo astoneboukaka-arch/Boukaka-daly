@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TypeRush - Test de Vitesse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="controle.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <h1>⌨️ TypeRush</h1>
+
+        <p>Test de vitesse de frappe</p>
+
+    </header>
+
+    <section class="top-bar">
+
+        <div class="difficulty">
+
+            <label>Niveau</label>
+
+            <select id="difficulty">
+
+                <option value="easy">Facile</option>
+
+                <option value="medium">Moyen</option>
+
+                <option value="hard">Difficile</option>
+
+            </select>
+
+        </div>
+
+        <button id="newTest">
+            Nouveau Test
+        </button>
+
+    </section>
+
+    <section class="stats">
+
+        <div class="card">
+
+            <h3>Temps</h3>
+
+            <span id="timer">0 s</span>
+
+        </div>
+
+        <div class="card">
+
+            <h3>WPM</h3>
+
+            <span id="wpm">0</span>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Précision</h3>
+
+            <span id="accuracy">100%</span>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Meilleur Score</h3>
+
+            <span id="bestScore">0</span>
+
+        </div>
+
+    </section>
+
+    <section class="typing-box">
+
+        <h2>Texte à reproduire</h2>
+
+        <div id="textDisplay">
+
+        </div>
+
+        <textarea
+                id="textInput"
+                placeholder="Commencez à taper ici..."
+                autocomplete="off"
+                spellcheck="false">
+        </textarea>
+
+    </section>
+
+    <section id="result" class="hidden">
+
+        <h2>Résultat</h2>
+
+        <div class="result-grid">
+
+            <div>
+
+                <h3>Temps</h3>
+
+                <p id="resultTime"></p>
+
+            </div>
+
+            <div>
+
+                <h3>Vitesse</h3>
+
+                <p id="resultWPM"></p>
+
+            </div>
+
+            <div>
+
+                <h3>Précision</h3>
+
+                <p id="resultAccuracy"></p>
+
+            </div>
+
+        </div>
+
+        <h3 id="performance"></h3>
+
+    </section>
+
+</div>
+
+<script src="controle.js"></script>
+
+</body>
+</html>
